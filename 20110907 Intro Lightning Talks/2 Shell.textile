@@ -1,0 +1,85 @@
+h2. Introduction to Interacting with the Shell
+
+h3. for the CWRU hacker society
+
+* being able to use the unix shell is an important skill
+* it is also really helpful to know
+** it provides a consistent way to interact with all of your tools
+** it makes automation easy
+** being able to pipe and redirect output (defined later!) is immensely powerful
+** job interviews _will_ ask shell questions
+* best way to be able to use the shell is by using a unix (which includes mac osx) or linux os
+** there are brand new ubuntu computers in Olin 404 on the right
+** alternatively use "cygwin":http://www.cygwin.com/ from windows
+
+h3. Example Commands
+
+h4. ls - list the contents of a directory
+<pre><code>brian@btp:~/Documents/CWRU/classNotes/eecs425/proj1$ ls
+data  Makefile  README  src
+brian@btp:~/Documents/CWRU/classNotes/eecs425/proj1$ ls -a
+.  ..  data  .git  .gitignore  Makefile  README  src
+</code></pre>
+
+h4. cd - change your working directory
+* use "~" to go back to home directory
+* use "-" to switch back to last directory
+
+h4. mv - move files and directories 
+* can be used to move as many files as wanted 
+
+h4. cp - copy files and directories
+* similar to mv, except leaves copy of file in place
+* must use "-r" option to recursively move directory
+
+h4. rm - remove files
+* file goes away for good - BE CAREFUL
+* I once removed all of the java files in a project within 3 minutes of its due time
+** fortunately I was using version control, which Fred Hatfull will tell you about later
+
+h4. mkdir - make a directory
+* does exactly what it says it does
+
+h4. top - display running tasks
+* useful for finding which process is taking up all of your cpu, or killing hung processes
+
+h4. grep - pattern matching
+* example use case: leaving "TODO" in your source files while you are working on them, in order to remember what to do later.  These can be found by issuing <code>grep -r TODO ./</code> in your project directory. 
+ 
+h3. Important Concepts
+
+* man pages
+** think of these as manuals for the commands you can issue in the shell
+** for instance, issuing <code>man ls</code> will show
+<pre><code>LS(1)                                                                 User Commands                                                                
+NAME
+       ls - list directory contents
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+DESCRIPTION
+       List information about the FILEs (the current directory by default).  Sort entries alphabetically if...
+       Mandatory arguments to long options are mandatory for short options too.
+       -a, --all
+              do not ignore entries starting with .
+...
+</code></pre>
+* piping and redirection
+** useful for all kinds of tasks
+** exemplary of the Unix philosophy, "Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface."
+** small example: writing a list of all of the cpp files in a directory
+<pre><code>brian@btp:~/Documents/CWRU$ ls resume/ | grep "pdf" > ./res_list.txt
+brian@btp:~/Documents/CWRU$ cat ./res_list.txt 
+res.pdf
+resume.pdf
+</code></pre>
+* Permisssions
+** Only certain users should be allowed to do certain things for security reasons
+** Very good chance you will be managing permissions using <code>sudo</code>
+*** This will prompt you for your password, and if you are in the list of users who can sudo the command will be executed
+*** Commands are executed as if by another user (which will probably be root)
+
+h3. End
+
+The command shell has an interesting learning curve.  At first it will be more difficult to use the shell than the graphical user interface to perform tasks, but persistence will help in learning.  Over time, it becomes an indispensable tool in the programmer's tool box.  Keep in mind that there are many people around who want to help you, but only if you try to figure it out first yourself.
+
+Thanks

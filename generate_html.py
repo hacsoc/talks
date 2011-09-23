@@ -3,7 +3,7 @@ import sys
 import yaml
 
 data = []
-for path in os.listdir('master_branch'):
+for path in os.listdir('.'):
     if os.path.isdir(path) and path.startswith('2'):
         try:
             with open(os.path.join(path, 'info.yaml')):

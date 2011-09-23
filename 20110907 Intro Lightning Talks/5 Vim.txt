@@ -1,0 +1,339 @@
+VIM: THE LIGHTNING TALK
+=======================
+
+Why, oh WHY, do those #?@! nutheads use vi?
+http://www.viemu.com/a-why-vi-vim.html
+
+This document is on Github!
+https://github.com/irskep/intro_talks_2011
+
+My reasons:
+
+* Remote editing
+* Handwriting : touch typing :: Notepad : vim
+* Tried emacs and didn't like it (ymmv)
+* Editing text takes less effort than any other editor I have used
+* Shortens the distance between your brain planning an edit and it actually happening
+  (try telling a professional Starcraft player to give up macros)
+* The philosophy is cool!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The philosophy you say?
+-----------------------
+
+Inserting text is pretty cool, but most of what we do is *moving* and *replacing* text.
+So vim has 3 modes, 2 of which are important:
+
+* Insert mode for inserting text AND ONLY INSERTING TEXT
+* Normal mode for manipulating text and moving the cursor for insert mode
+* Visual mode, mostly to make the GUI ports (e.g. MacVim) work nicely with the mouse
+
+Normal mode commands are verbs, nouns, or "other."
+
+Examples of verbs:
+
+* Insert (i)
+* Delete (d)
+* Change (c)
+* Append (a)
+* Toggle case (~)
+* Open a new line below the current one (o)
+* Yank (copy) and paste (y, p)
+* Move by one character (hjkl or arrow keys)
+
+Examples of nouns:
+
+* beginning, end of word, line, sentence, paragraph
+* beginning, end of the document
+* next or previous occurrence of a character
+* next or previous occurrence of a regular expression
+
+Examples of "other":
+
+* Start/stop recording macro (q), play macro (@)
+* Undo (u), redo (ctrl-r)
+* Repeat (.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vim for the supremely lazy (i.e. EECS 337 students)
+---------------------------------------------------
+
+    > vim myfile.txt
+
+    - i
+    - I am editing a file
+    - <esc>
+    - :w
+
+    > cat myfile.txt
+    I am editing a file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Baby's first changes
+--------------------
+
+Using: ixwbc
+
+    vma sucks!
+
+* Fix vma -> vim by inserting 'i' and deleting 'a'
+* Replace sucks -> rocks using cw
+
+wbchjkl probably account for 70% of my normal mode keystrokes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Deleting stuff
+--------------
+
+Using: dpPu
+
+There is word a out of place.
+
+* move to 'word' and delete it with dw
+* move to 'a' and paste with p
+* oh no it pasted in the wrong place, undo with 'u' 
+* move to the space after 'a'
+* paste again
+
+
+These lines
+of order
+are out
+
+* move to 'of order'
+* delete line with dd
+* paste after current line with p
+
+
+These lines
+of order
+are out
+
+* another way: move to 'are out'
+* delete line with dd
+* paste before current line with P
+
+
+
+
+
+
+
+
+
+
+
+
+
+More fun things
+---------------
+
+Using: aA0^$CI
+
+    Finish this sentence with a
+
+* move to the end of the line with $
+* try to add with i, lol you can't
+* use a instead, it means append
+* undo that, let's do it a better way
+* move to the start of the line with 0 or ^ (^ moves past leading whitespace)
+* append to the entire line with A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Let's get crazy now
+-------------------
+
+Using: q
+
+    zonk('alice', 123)
+        zonk('bob', 456),
+    junk
+    x, zonk('carol', 789)
+
+The zonk function maintainer just flipped his function arguments. WHAAAAT
+
+okay don't panic we can solve this with MACROS
+
+* use /zonk<return> to find an occurrence of zonk
+* press q to start recording a macro
+* use f' to go to the first '
+* use dt, to delete up to the comma
+* move to the space with l or <rightarrow>
+* paste with p
+* move right to the first number
+* use dt) to delete up to the )
+* use F( to move back to the (
+* paste with p
+* use /zonk<return> to find another zonk but not modify it in case it's not correct
+* press q to stop recording
+* play back the macro with @q and then @@ (play last macro)
+
+That looks complicated, but your fingers will Just Do It!
+
+I think Sublime Text also does nice things similar to this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BTW NERDTree
+------------
+
+Hey Steve press F6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Downsides
+---------
+
+* Autocomplete is not the greatest sometimes
+* Learning curve, derp
+* Configuration has an even steeper (though not awful) learning curve
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Good Plug-Ins
+=============
+
+* Pathogen
+* NERDTree
+* surround
+* YOUR SUGGESTION HERE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+More Information
+================
+
+I learned vim this way:
+http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html
+
+You can also try this way:
+http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
+
+Ask me for vim tips!

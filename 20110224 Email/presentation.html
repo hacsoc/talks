@@ -1,0 +1,662 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen, projection, print" href="css/slidy.css" /> 
+		<script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js" charset="utf-8" type="text/javascript"></script>
+		<style>
+			.meta {color: orange}
+			.client {color: green;}
+			.command {color: green; }
+			.server {color: #FF2F2F;}
+			.code {font-family: monospace; overflow-x: auto}
+			pre {overflow-x: auto}
+		</style>
+	</head>
+	<body>
+		<div class="slide titlepage">
+			<h1>Email</h1>
+		</div>
+		<div class="slide">
+			<h1>Let's send an email</h1>
+			<div class="code incremental">
+				<span>
+					<span class="meta">Connected to smtp.case.edu:25<br></span>
+					<span class="server">220 mpv5.TIS.cwru.edu ESMTP Mirapoint 3.10.9-GA; Wed, 23 Feb 2011 00:37:36 -0500 (EST)<br></span>
+				</span>
+				<span>
+					<span class="client">EHLO zinfandel.case.edu<br></span>
+					<span class="server">
+					250-mpv5.TIS.cwru.edu Hello zinfandel.STUDENT.CWRU.Edu [129.22.169.103], pleased to meet you<br>
+					250-8BITMIME<br>
+					250-SIZE 53248000<br>
+					250-DSN<br>
+					250-ETRN<br>
+					250-AUTH LOGIN<br>
+					250-AUTH=LOGIN<br>
+					250-STARTTLS<br>
+					250 HELP<br>
+					</span>
+				</span>
+				<span>
+					<span class="client">MAIL FROM: &lt;carol@case.edu&gt;<br></span>
+					<span class="server">250 &lt;carol@case.edu&gt;... Sender ok<br></span>
+				</span>
+				<span>
+					<span class="client">RCPT TO: &lt;dave@case.edu&gt;<br></span>
+					<span class="server">250 &lt;dave@case.edu&gt;... Recipient ok<br></span>
+				</span>
+				<span>
+					<span class="client">DATA<br></span>
+					<span class="server">354 Enter mail, end with "." on a line by itself<br></span>
+				</span>
+				<span>
+					<span class="client">
+						Test Alpha<br>
+						.<br>
+					</span>
+					<span class="server">250 FFR95687 Message accepted for delivery<br></span>
+				</span>
+				<span>
+					<span class="client">QUIT<br></span>
+					<span class="server">221 mpv5.TIS.cwru.edu closing connection<br></span>
+					<span class="meta">Server closed connection<br></span>
+				</span>
+			</div>
+		</div>
+		<div class="slide titlepage">
+			<h1>SMTP</h1>
+		</div>
+		<div class="slide">
+			<h1>How did it come out?</h1>
+			<img src="images/sample1.png" />
+<pre style="font-size: 14px">
+Delivered-To: jas404@cwru.edu
+Received: by 10.42.218.69 with SMTP id hp5cs350434icb;
+        Tue, 22 Feb 2011 21:38:08 -0800 (PST)
+Received: by 10.229.95.4 with SMTP id b4mr2709086qcn.86.1298439487929;
+        Tue, 22 Feb 2011 21:38:07 -0800 (PST)
+Received: from mpv5.TIS.cwru.edu (mpv5.tis.CWRU.Edu [129.22.105.51])
+        by mx.google.com with ESMTPS id i34si14462085qck.68.2011.02.22.21.38.07
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 22 Feb 2011 21:38:07 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning carol@case.edu does not designate 129.22.169.103 as permitted sender) client-ip=129.22.169.103;
+Received: from zinfandel.case.edu (zinfandel.STUDENT.CWRU.Edu [129.22.169.103])
+        by mpv5.TIS.cwru.edu (MOS 3.10.9-GA)
+        with ESMTP id FFR95687
+        for &lt;dave@case.edu&gt;;
+        Wed, 23 Feb 2011 00:37:56 -0500 (EST)
+Date: Wed, 23 Feb 2011 00:37:36 -0500 (EST)
+From: &lt;carol@case.edu&gt;
+Message-Id: &lt;201102230537.FFR95687@mpv5.TIS.cwru.edu&gt;
+
+Test Alpha
+</pre>
+		</div>
+		<div class="slide" style="font-size: 20px">
+			<h1>Redo...</h1>
+			<div class="code incremental">
+				<span>
+					<span class="meta">Connected to smtp.case.edu:25<br></span>
+					<span class="server">220 mpv5.TIS.cwru.edu ESMTP Mirapoint 3.10.9-GA; Wed, 23 Feb 2011 01:13:45 -0500 (EST)<br></span>
+				</span>
+				<span>
+					<span class="client">EHLO zinfandel.case.edu<br></span>
+					<span class="server">
+					250-mpv5.TIS.cwru.edu Hello zinfandel.STUDENT.CWRU.Edu [129.22.169.103], pleased to meet you<br>
+					250-8BITMIME<br>
+					250-SIZE 53248000<br>
+					250-DSN<br>
+					250-ETRN<br>
+					250-AUTH LOGIN<br>
+					250-AUTH=LOGIN<br>
+					250-STARTTLS<br>
+					250 HELP<br>
+					</span>
+				</span>
+				<span>
+					<span class="client">MAIL FROM: &lt;carol@case.edu&gt;<br></span>
+					<span class="server">250 &lt;carol@case.edu&gt;... Sender ok<br></span>
+				</span>
+				<span>
+					<span class="client">RCPT TO: &lt;alice@code406.com&gt;<br></span>
+					<span class="server">250 &lt;alice@code406.com&gt;... Recipient ok<br></span>
+				</span>
+				<span>
+					<span class="client">RCPT TO: &lt;dave@case.edu&gt;<br></span>
+					<span class="server">250 &lt;dave@case.edu&gt;... Recipient ok<br></span>
+				</span>
+				<span>
+					<span class="client">DATA<br></span>
+					<span class="server">354 Enter mail, end with "." on a line by itself<br></span>
+				</span>
+				<span>
+					<span class="client">
+						Date: Wed, 23 Feb 2011 01:12:23 -0500<br>
+						Subject: Test Bravo<br>
+						From: "Carol Public" &lt;carol@case.edu&gt;<br>
+						To: "Alice Public" &lt;alice@case.edu&gt;, "Dave Public" &lt;dave@code406.com&gt;<br>
+						<br>
+						Sample #2<br>
+						.<br>
+					</span>
+					<span class="server">250 FFR97310 Message accepted for delivery<br></span>
+				</span>
+				<span>
+					<span class="client">QUIT<br></span>
+					<span class="server">221 mpv5.TIS.cwru.edu closing connection<br></span>
+					<span class="meta">Server closed connection<br></span>
+				</span>
+			</div>
+		</div>
+		<div class="slide">
+			<h1>Sample 2: Results<h1/>
+			<img src="images/sample2.png">
+		</div>
+		<div class="slide">
+			<h1>Sample 2: Behind the scenes</h1>
+<pre style="font-size: 14px; width: 90%; overflow-x: scroll">
+Delivered-To: alice@code406.com
+Received: by 10.204.10.85 with SMTP id o21cs309307bko;
+        Tue, 22 Feb 2011 22:16:05 -0800 (PST)
+Received: by 10.224.67.67 with SMTP id q3mr3041236qai.171.1298441765156;
+        Tue, 22 Feb 2011 22:16:05 -0800 (PST)
+Return-Path: &lt;carol@case.edu&gt;
+Received: from mpv2.tis.cwru.edu (mpv2.tis.cwru.edu [129.22.105.37])
+        by mx.google.com with ESMTPS id j12si14497431qcu.159.2011.02.22.22.16.04
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 22 Feb 2011 22:16:05 -0800 (PST)
+Received-SPF: pass (google.com: domain of carol@case.edu designates 129.22.105.37 as permitted sender) client-ip=129.22.105.37;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of carol@case.edu designates 129.22.105.37 as permitted sender) smtp.mail=carol@case.edu
+Received: from mpv5.TIS.cwru.edu (mpv5.tis.cwru.edu [129.22.105.51])
+	by mpv2.tis.cwru.edu (MOS 4.1.9-GA)
+	with ESMTP id AVY04695
+	for &lt;alice@code406.com&gt;;
+	Wed, 23 Feb 2011 01:16:04 -0500
+Received: from zinfandel.case.edu (zinfandel.STUDENT.CWRU.Edu [129.22.169.103])
+	by mpv5.TIS.cwru.edu (MOS 3.10.9-GA)
+	with ESMTP id FFR97310;
+	Wed, 23 Feb 2011 01:13:52 -0500 (EST)
+Message-Id: &lt;201102230613.FFR97310@mpv5.TIS.cwru.edu&gt;
+Date: Wed, 23 Feb 2011 01:12:23 -0500
+Subject: Test Bravo
+From: "Carol Public" &lt;carol@case.edu&gt;
+To: "Alice Public" &lt;alice@case.edu&gt;, "Dave Public" &lt;dave@code406.com&gt;
+
+Sample #2
+</pre>
+		</div>
+		<div class="slide titlepage">
+			<h1>Where should it go?</h1>
+		</div>
+		<div class="slide">
+			<h1>MX?</h1>
+<pre>
+$ dig +short mx case.edu      
+5 smtp.cwru.edu.
+$ dig +short mx code406.com   
+15 alt1.aspmx.l.google.com.
+20 aspmx2.googlemail.com.
+10 aspmx.l.google.com.
+$ dig +short mx whitehouse.gov
+105 mail3.eop.gov.
+105 mail2.eop.gov.
+105 mail1.eop.gov.
+105 mail4.eop.gov.
+</pre>
+		</div>
+		<div class="slide titlepage">
+			<h1>Email is totally secure, right?</h1>
+		</div>
+		<div class="slide">
+			<h1>Spoofing</h1>
+			<div class="code" style="font-size: 14pt; height: 80%">
+				<span>
+					<span class="meta">Connected to smtp.case.edu:25<br></span>
+					<span class="server">220 mpv6.TIS.cwru.edu ESMTP Mirapoint 3.10.9-GA; Wed, 23 Feb 2011 03:14:39 -0500 (EST)<br></span>
+				</span>
+				<span>
+					<span class="client">EHLO zinfandel.case.edu<br></span>
+					<span class="server">
+						250-mpv6.TIS.cwru.edu Hello zinfandel.STUDENT.CWRU.Edu [129.22.169.103], pleased to meet you<br>
+						250-8BITMIME<br>
+						250-SIZE 53248000<br>
+						250-DSN<br>
+						250-ETRN<br>
+						250-AUTH LOGIN<br>
+						250-AUTH=LOGIN<br>
+						250-STARTTLS<br>
+						250 HELP<br>
+					</span>
+				</span>
+				<span>
+					<span class="client">MAIL FROM: &lt;obama@whitehouse.gov&gt;<br></span>
+					<span class="server">250 &lt;obama@whitehouse.gov&gt;... Sender ok<br></span>
+				</span>
+				<span>
+					<span class="client">RCPT TO: &lt;alice@code406.com&gt;<br></span>
+					<span class="server">250 &lt;alice@code406.com&gt;... Recipient ok<br></span>
+				</span>
+				<span>
+					<span class="client">DATA<br></span>
+					<span class="server">354 Enter mail, end with "." on a line by itself<br></span>
+				</span>
+				<span>
+					<span class="client">
+						Date: Tue, 20 Jan 2009 13:21:10 -0500<br>
+						Subject: Missile Launch Instructions<br>
+						From: "Barack H Obama, POTUS" &lt;obama@whitehouse.gov&gt;<br>
+						To: "Alice Military" &lt;alice@code406.com&gt;, "Bob Military" &lt;bob@code406.com&gt;<br>
+						<br>
+						Test Charlie<br>
+						.<br>
+					</span>
+					<span class="server">250 FFP92008 Message accepted for delivery<br></span>
+				</span>
+				<span>
+					<span class="client">QUIT<br></span>
+					<span class="server">221 mpv6.TIS.cwru.edu closing connection<br></span>
+					<span class="meta">Server closed connection<br></span>
+				</span>
+			</div>
+		</div>
+		<div class="slide">
+			<h1>Spoofed!</h1>
+			<img src="images/sample3.png">
+		</div>
+		<div class="slide">
+			<h1>AUTH'd</h1>
+			<div style="float: right; width: 35%">
+				<p>
+				SMTP AUTH<br>
+				Proposed in <a target="_blank" href="http://tools.ietf.org/html/rfc2554">RFC 2554</a> (1999)<br>
+				Re-proposed in <a target="_blank" href="http://tools.ietf.org/html/rfc4954">RFC 4954</a> (2007)<br>
+				</p>
+				<div class="code">
+					<span class="meta">Connected to localhost:465 over SSL</span>
+					<span class="server">220 zinfandel ESMTP Postfix<br></span>
+					<span class="client">
+						EHLO zinfandel.case.edu<br>
+						250-zinfandel<br>
+						250-PIPELINING<br>
+						250-SIZE 10240000<br>
+						250-VRFY<br>
+						250-ETRN<br>
+						250-AUTH LOGIN PLAIN<br>
+						250-ENHANCEDSTATUSCODES<br>
+						250-8BITMIME<br>
+						250 DSN<br>
+					</span>
+					<span class="client">AUTH PLAIN AGpvc2gAbm90IG15IHJlYWwgcGFzc3dvcmQ=</span>
+					<span class="server">235 2.7.0 Authentication successful</span>
+				</div>
+			</div>
+			<div class="code" style="font-size: 12pt; width: 55%; height: 80%">
+				<span class="meta">Connected to smtp.case.edu:25<br></span>
+				<span class="server">220 mpv5.cwru.edu ESMTP Mirapoint 4.2.3-GA; Wed, 23 Feb 2011 05:42:39 -0500<br></span>
+				<span class="client">EHLO zinfandel.case.edu<br></span>
+				<span class="server">
+					250-mpv5.cwru.edu Hello zinfandel.STUDENT.CWRU.Edu [129.22.169.103], pleased to meet you<br>
+					250-8BITMIME<br>
+					250-SIZE 53248000<br>
+					250-DSN<br>
+					250-ETRN<br>
+					250-AUTH LOGIN<br>
+					250-AUTH=LOGIN<br>
+					250-STARTTLS<br>
+					250 HELP<br>
+				</span>
+				<span class="client">AUTH LOGIN<br></span>
+				<span class="server">334 VXNlcm5hbWU6<br></span>
+				<span class="client">amFzNDA0<br></span>
+				<span class="server">334 UGFzc3dvcmQ6<br></span>
+				<span class="client">bm90IG15IGFjdHVhbCBwYXNzd29yZA==<br></span>
+				<span class="server">235 Authentication successful.<br></span>
+				<span class="client">MAIL FROM: &lt;obama@whitehouse.gov&gt;<br></span>
+				<span class="server">250 &lt;obama@whitehouse.gov&gt;... Sender ok<br></span>
+				<span class="client">RCPT TO: &lt;carol@case.edu&gt;<br></span>
+				<span class="server">250 &lt;carol@case.edu&gt;... Recipient ok<br></span>
+				<span class="client">DATA<br></span>
+				<span class="server">354 Enter mail, end with "." on a line by itself<br></span>
+				<span class="client">
+					Date: Wed, 23 Feb 2011 05:43:36 -0500 (EST)<br>
+					From: "Barack H. Obama, POTUS" &lt;obama@whitehouse.gov&gt;<br>
+					Subject: Test Delta<br>
+					To: "Carol Military" &lt;carol@case.edu&gt;<br>
+					<br>
+					How's SMTP Auth working out for you?<br>
+					.<br>
+				</span>
+				<span class="server">250 AAO01893 Message accepted for delivery<br></span>
+				<span class="client">QUIT<br></span>
+				<span class="server">221 mpv5.cwru.edu closing connection<br></span>
+				<span class="meta">Server closed connection<br></span>
+			</div>
+		</div>
+		<div class="slide">
+			<h1>AUTH'd?</h1>
+			<pre>
+...snip...
+Received: from zinfandel.case.edu (zinfandel.STUDENT.CWRU.Edu [129.22.169.103])
+        by mpv5.cwru.edu (MOS 4.2.3-GA)
+        with ESMTP id AAO01893 (AUTH jas404)
+        for &lt;carol@case.edu&gt;;
+        Wed, 23 Feb 2011 05:43:27 -0500
+Message-Id: &lt;201102231043.AAO01893@mpv5.cwru.edu&gt;
+Date: Wed, 23 Feb 2011 05:43:36 -0500 (EST)
+From: "Barack H. Obama, POTUS" &lt;obama@whitehouse.gov&gt;
+Subject: Test Delta
+To: "Carol Military" &lt;carol@case.edu&gt;
+...snip...
+
+How's SMTP Auth working out for you?</pre>
+		</div>
+		<div class="slide">
+			<h1>To the DNS!</h1>
+			<div class="code">
+				<span class="command">$ dig +short txt case.edu<br></span>
+				"v=spf1 mx a:mpv5.cwru.edu a:mpv6.cwru.edu a:mpv7.cwru.edu a:mpv8.cwru.edu a:mpv1.cwru.edu a:mpv2.cwru.edu a:mpv3.cwru.edu a:mpv4.cwru.edu include:aspmx.googlemail.com ~all"<br>
+				<br>
+				<span class="command">$ dig +short txt google.com<br></span>
+				"v=spf1 include:_netblocks.google.com ip4:216.73.93.70/31 ip4:216.73.93.72/31 ~all"<br>
+				<br>
+				<span class="command">$ dig +short txt _netblocks.google.com<br></span>
+				"v=spf1 ip4:216.239.32.0/19 ip4:64.233.160.0/19 ip4:66.249.80.0/20 ip4:72.14.192.0/18 ip4:209.85.128.0/17 ip4:66.102.0.0/20 ip4:74.125.0.0/16 ip4:64.18.0.0/20 ip4:207.126.144.0/20 ip4:173.194.0.0/16 ?all"<br>
+				<br>
+				<span class="command">$ dig +short txt gmail.com<br></span>
+				"v=spf1 redirect=_spf.google.com"<br>
+				<br>
+				<span class="command">$ dig +short txt _spf.google.com<br></span>
+				"v=spf1 ip4:216.239.32.0/19 ip4:64.233.160.0/19 ip4:66.249.80.0/20 ip4:72.14.192.0/18 ip4:209.85.128.0/17 ip4:66.102.0.0/20 ip4:74.125.0.0/16 ip4:64.18.0.0/20 ip4:207.126.144.0/20 ip4:173.194.0.0/16 ?all"<br>
+				<br>
+				<span class="command">$ dig +short txt whitehouse.gov<br></span>
+				"v=spf1 +mx ~all"<br>
+			</div>
+		</div>
+		<div class="slide">
+			<h1>Enter SPF</h1>
+			<ul>
+				<li><a target="_blank" href="http://tools.ietf.org/html/rfc4408">RFC 4408</a> (2006)</li>
+<li>Defines a <a target="_blank" href="https://secure.wikimedia.org/wikipedia/en/wiki/Sender_Policy_Framework#Mechanisms">language</a> indicating which hosts can send mail</li>
+			</ul>
+			<iframe src="https://secure.wikimedia.org/wikipedia/en/w/index.php?title=Sender_Policy_Framework&oldid=411257355#Mechanisms" style="width: 100%; height: 60%">
+			</iframe>
+		</div>
+		<div class="slide">
+			<h1>Fail, SPF</h1>
+			<div class="code">
+				<p class="command">$ dig +short txt oracle.com</p>
+				<p class="command">$ dig +short txt ycombinator.com</p>
+				<p class="command">$ dig +short txt apache.org</p>
+				<p class="command">$ dig +short txt gawker.com</p>
+				<p class="command">$ dig +short txt woot.com</p>
+				<p class="command">$ dig +short txt wikimedia.org</p>
+			</div>
+		</div>
+		<div class="slide">
+			<h1>Aside: <a target="_blank" href="http://msexchangeteam.com/archive/2004/04/08/109626.aspx">Bedlam DL3</a></h1>
+			<iframe src="http://msexchangeteam.com/archive/2004/04/08/109626.aspx" style="width: 100%; height: 80%"></iframe>
+		</div>
+		<div class="slide">
+			<h1><a href="http://dkim.org/specs/rfc4871-dkimbase.html" target="_blank">DKIM</a></h1>
+<pre style="font-size: 20px">
+X-Authentication-Results: shopping.example.net
+      header.from=joe@football.example.com; dkim=pass
+Received: from mout23.football.example.com (192.168.1.1)
+      by shopping.example.net with SMTP;
+      Fri, 11 Jul 2003 21:01:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; s=brisbane; d=example.com;
+      c=simple/simple; q=dns/txt; i=joe@football.example.com;
+      h=Received : From : To : Subject : Date : Message-ID;
+      bh=2jUSOH9NhtVGCQWNr9BrIAPreKQjO6Sn7XIkfJVOzv8=;
+      b=AuUoFEfDxTDkHlLXSZEpZj79LICEps6eda7W3deTVFOk4yAUoqOB
+        4nujc7YopdG5dWLSdNg6xNAZpOPr+kHxt1IrE+NahM6L/LbvaHut
+        KVdkLLkpVaVVQPzeRDI009SO2Il5Lu7rDNH6mZckBdrIx0orEtZV
+        4bmp/YzhwvcubU4=;
+Received: from client1.football.example.com  [192.0.2.1]
+      by submitserver.example.com with SUBMISSION;
+      Fri, 11 Jul 2003 21:01:54 -0700 (PDT)
+From: Joe SixPack &lt;joe@football.example.com&gt;
+To: Suzie Q &lt;suzie@shopping.example.net&gt;
+Subject: Is dinner ready?
+Date: Fri, 11 Jul 2003 21:00:37 -0700 (PDT)
+Message-ID: &lt;20030712040037.46341.5F8J@football.example.com&gt;
+
+Hi.
+
+We lost the game. Are you hungry yet?
+
+Joe.
+</pre>
+		</div>
+		<div class="slide">
+			<h1>A somewhat better example</h1>
+			<div class="code" style="font-size: 15px">
+				<span class="command" >dig +short txt gamma._domainkey.gmail.com</span><br>
+				"k=rsa\; t=y\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDIhyR3oItOy22ZOaBrIVe9m/iME3RqOJeasANSpg2YTHTYV+Xtp4xwf5gTjCmHQEMOs0qYu0FYiNQPQogJ2t0Mfx9zNu06rfRBDjiIU9tpx2T+NGlWZ8qhbiLo5By8apJavLyqTLavyPSrvsx0B3YzC63T4Age2CDqZYA+OwSMWQIDAQAB"				
+				</span>
+			</div>
+<pre style="height: 70%; font-size: 16px; overflow-y: scroll;">
+Delivered-To: josh@code406.com
+Received: by 10.204.10.85 with SMTP id o21cs344240bko;
+        Wed, 23 Feb 2011 12:08:49 -0800 (PST)
+Received: by 10.224.11.68 with SMTP id s4mr3811171qas.385.1298491728546;
+        Wed, 23 Feb 2011 12:08:48 -0800 (PST)
+Return-Path: &lt;jas404+caf_=josh=code406.com@case.edu&gt;
+Received: from mpv2.tis.cwru.edu (mpv2.tis.CWRU.Edu [129.22.105.37])
+        by mx.google.com with ESMTPS id u11si16081000qco.45.2011.02.23.12.08.47
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 23 Feb 2011 12:08:48 -0800 (PST)
+Received-SPF: pass (google.com: domain of jas404+caf_=josh=code406.com@case.edu designates 129.22.105.37 as permitted sender) client-ip=129.22.105.37;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of jas404+caf_=josh=code406.com@case.edu designates 129.22.105.37 as permitted sender) smtp.mail=jas404+caf_=josh=code406.com@case.edu; dkim=pass (test mode) header.i=@gmail.com
+Received: from mpv8.TIS.CWRU.edu (mpv8.tis.cwru.edu [129.22.105.116])
+	by mpv2.tis.cwru.edu (MOS 4.1.9-GA)
+	with ESMTP id AVY85285
+	for &lt;josh@code406.com&gt;;
+	Wed, 23 Feb 2011 15:08:46 -0500
+Received: from mail-vw0-f54.google.com (mail-vw0-f54.google.com [209.85.212.54])
+	by mpv8.TIS.CWRU.edu (MOS 4.1.9-GA)
+	with ESMTP id PYR06195
+	for &lt;josh@code406.com&gt;;
+	Wed, 23 Feb 2011 15:08:46 -0500
+Received: by mail-vw0-f54.google.com with SMTP id 16so3297370vws.13
+        for &lt;josh@code406.com&gt;; Wed, 23 Feb 2011 12:08:46 -0800 (PST)
+Received: by 10.52.158.136 with SMTP id wu8mr6914401vdb.218.1298491715454;
+        Wed, 23 Feb 2011 12:08:35 -0800 (PST)
+X-Forwarded-To: josh@code406.com
+X-Forwarded-For: jas404@case.edu josh@code406.com
+Delivered-To: jas404@cwru.edu
+Received: by 10.220.199.132 with SMTP id es4cs398223vcb;
+        Wed, 23 Feb 2011 12:08:35 -0800 (PST)
+Received: by 10.224.45.66 with SMTP id d2mr3831936qaf.48.1298491714639;
+        Wed, 23 Feb 2011 12:08:34 -0800 (PST)
+Received: from mpv7.case.edu (mpv7.tis.cwru.edu [129.22.104.170])
+        by mx.google.com with ESMTPS id p13si16064743qcu.137.2011.02.23.12.08.34
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 23 Feb 2011 12:08:34 -0800 (PST)
+Received-SPF: pass (google.com: domain of hashbrowncipher@gmail.com designates 209.85.215.41 as permitted sender) client-ip=209.85.215.41;
+Received: from mail-ew0-f41.google.com (mail-ew0-f41.google.com [209.85.215.41])
+	by mpv7.case.edu (MOS 4.2.3-GA)
+	with ESMTP id PSS19798
+	for &lt;jas404@case.edu&gt;;
+	Wed, 23 Feb 2011 15:08:33 -0500
+Received: by ewy10 with SMTP id 10so2135277ewy.14
+        for &lt;jas404@case.edu&gt;; Wed, 23 Feb 2011 12:08:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=gamma;
+        h=domainkey-signature:mime-version:reply-to:date:message-id:subject
+         :from:to:content-type;
+        bh=PmuYA8hB/qCFpVD2Pe5Pt8UnMLFMbkx3nvj9C4RvMcI=;
+        b=NPB5K/wjdboRumbd3CdbQtu9kZFszI/5V0//PU2sR/oYhUsxvUyYrrYBPT5C4jEBGY
+         AlPW++pUKCmWZALYUIBgV9WRcf4B6Ox6cg04UdZFlbHH7I2a7R6hhkocidk0e07uPrN7
+         Uzh6XpTqTkWxmyrCTZNnYqsnoAR+ISyDhAeAs=
+DomainKey-Signature: a=rsa-sha1; c=nofws;
+        d=gmail.com; s=gamma;
+        h=mime-version:reply-to:date:message-id:subject:from:to:content-type;
+        b=K6C6taUHwxPg3KEMW+YQM/8fkc5FXdTup6O8qsaV0cDMI8eboBsWuxCoFiVhRXuAlo
+         ZTo9Kd5vxGLO/tGBrS/isfIctU/guY2G801tgs23b30RAUHYyhlIHN9zIsIkHGBvZm5c
+         epUHEeWIde/Ql6H7kAT+WIXIzb7BfiG6E6wHg=
+MIME-Version: 1.0
+Received: by 10.213.19.207 with SMTP id c15mr464434ebb.76.1298491712433; Wed,
+ 23 Feb 2011 12:08:32 -0800 (PST)
+Received: by 10.213.108.76 with HTTP; Wed, 23 Feb 2011 12:08:32 -0800 (PST)
+Reply-To: josh@karensnyder.com
+Date: Wed, 23 Feb 2011 15:08:32 -0500
+Message-ID: &lt;AANLkTi=RAksw9=m0NGwy2z5ga4Fp_7nLtjA0xSEiTKFy@mail.gmail.com&gt;
+Subject: Test Echo
+From: Josh Snyder &lt;hashbrowncipher@gmail.com&gt;
+To: Joshua Snyder &lt;jas404@case.edu&gt;
+Content-Type: multipart/alternative; boundary=0015174be298436d85049cf8a97b
+
+--0015174be298436d85049cf8a97b
+Content-Type: text/plain; charset=ISO-8859-1
+
+DomainKeys, anyone?
+
+--0015174be298436d85049cf8a97b
+Content-Type: text/html; charset=ISO-8859-1
+
+DomainKeys, anyone?&lt;br&gt;&lt;br&gt;
+
+--0015174be298436d85049cf8a97b--
+</pre>
+		</div>
+		<div class="slide titlepage">
+			<h1>Spam, Ham, and some eggs too!</h1>
+		</div>
+		<div class="slide">
+			<h1>Time for lunch</h1>
+<pre style="overflow-x: scroll">
+X-Spam-Status: No, score=6.176 tagged_above=2 required=6.31
+ tests=[BAYES_50=0.001, DCC_CHECK=4, RDNS_NONE=0.1, SPF_HELO_PASS=-0.001,
+ SPF_PASS=-0.001, SUBJ_ALL_CAPS=2.077]
+...snip...
+Date: Wed, 1 Aug 2007 02:41:49 -0500
+Message-Id: &lt;200708010741.l717fnss001406@scimall.com&gt;
+To: webmaster@mbhs.edu
+Subject: MY BEST REGARDS
+From: Macl Daniels &lt;macldaniels@yahoo.com.sg&gt;
+Reply-To: macldaniels@gmail.com
+MIME-Version: 1.0
+Content-Type: text/plain
+Content-Transfer-Encoding: 8bit
+</pre>
+		</div>
+		<div class="slide">
+			<h1>Whaaat?</h1>
+			<div class="code">
+				<span>
+					<span class="meta">Connected to smtp.case.edu:25<br></span>
+					<span class="server">220 mpv8.TIS.CWRU.edu ESMTP Mirapoint 4.1.9-GA; Wed, 23 Feb 2011 04:39:08 -0500<br></span>
+				</span>
+				<span class="meta">....snip...<br></span>
+				<span>
+					<span class="client">MAIL FROM: &lt;obama@whitehouse.gov&gt;<br></span>
+					<span class="server">250 &lt;obama@whitehouse.gov&gt;... Sender ok<br></span>
+				</span>
+				<span>
+					<span class="client">RCPT TO: &lt;josh@case.edu&gt;<br></span>
+					<span class="server">451 &lt;josh@case.edu&gt;... Requested mail action not taken: mailbox unavailable<br></span>
+				</span>
+				<span>
+					<span class="client">QUIT<br></span>
+					<span class="server">221 mpv8.TIS.CWRU.edu closing connection<br></span>
+					<span class="meta">Server closed connection<br></span>
+				</span>
+			</div>
+		</div>
+		<div class="slide">
+<h1>What is this MIME you speak of?</h1>
+<pre style="height: 80%; overflow-y: scroll; font-size: 16px">
+Delivered-To: josh@code406.com
+Received: by 10.204.10.85 with SMTP id o21cs345875bko;
+        Wed, 23 Feb 2011 13:08:55 -0800 (PST)
+Received: by 10.213.33.10 with SMTP id f10mr518782ebd.53.1298495335022;
+        Wed, 23 Feb 2011 13:08:55 -0800 (PST)
+Return-Path: &lt;hashbrowncipher@gmail.com&gt;
+Received: from mail-ey0-f169.google.com (mail-ey0-f169.google.com [209.85.215.169])
+        by mx.google.com with ESMTPS id t51si20258762eeh.94.2011.02.23.13.08.54
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 23 Feb 2011 13:08:55 -0800 (PST)
+Received-SPF: pass (google.com: domain of hashbrowncipher@gmail.com designates 209.85.215.169 as permitted sender) client-ip=209.85.215.169;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of hashbrowncipher@gmail.com designates 209.85.215.169 as permitted sender) smtp.mail=hashbrowncipher@gmail.com; dkim=pass (test mode) header.i=@gmail.com
+Received: by eyh6 with SMTP id 6so2302369eyh.14
+        for &lt;josh@code406.com&gt;; Wed, 23 Feb 2011 13:08:54 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=gamma;
+        h=domainkey-signature:mime-version:reply-to:date:message-id:subject
+         :from:to:content-type;
+        bh=CMw6w+Jm5Jvb+G5lUmXpAMkcKuFH9BpZzTx7NivzZVg=;
+        b=X5VjfBIBe336uOxu7SUuBK6Wt96OKxgtntEtxtrO9U7HiBn+JJlckSq86ZNIjoz9cx
+         jrRswOJPgsc01UrXjOJLZsga/WRzwfETTbX/m/fHLepgSJzTgH4teoH7FGT2ERRfpHt+
+         5whEuPmMU9OhxIByRajjRdwU60Ti10ULt7Oh0=
+DomainKey-Signature: a=rsa-sha1; c=nofws;
+        d=gmail.com; s=gamma;
+        h=mime-version:reply-to:date:message-id:subject:from:to:content-type;
+        b=F6e+u/I5oCWD47hWWdGMWQ3vharWTx8RH3qML29deCYw/BV6YaK2CBPloGvIKoQmep
+         yeUjRx0aQeCaf3IhrlQg8Nfo7F9DOO3bH/AAEzRCKZeQmb6tkjJZuzx4+TR3F/cIZNCA
+         cWbg070hAoUtcGqxCQW1uz3UYuCp1dBnoS4Jk=
+MIME-Version: 1.0
+Received: by 10.213.34.207 with SMTP id m15mr6853ebd.89.1298495334545; Wed, 23
+ Feb 2011 13:08:54 -0800 (PST)
+Received: by 10.213.108.76 with HTTP; Wed, 23 Feb 2011 13:08:54 -0800 (PST)
+Reply-To: hashbrowncipher@gmail.com
+Date: Wed, 23 Feb 2011 16:08:54 -0500
+Message-ID: &lt;AANLkTi=M5jHHSPGpG-sCU+-2ho=c2b9-avHKT7sPjNLk@mail.gmail.com&gt;
+Subject: Test Foxtrot
+From: Josh Snyder &lt;hashbrowncipher@gmail.com&gt;
+To: Me &lt;josh@code406.com&gt;
+Content-Type: multipart/mixed; boundary=000e0cd5bc5e287bc6049cf9818a
+
+--000e0cd5bc5e287bc6049cf9818a
+Content-Type: multipart/alternative; boundary=000e0cd5bc5e287baf049cf98188
+
+--000e0cd5bc5e287baf049cf98188
+Content-Type: text/plain; charset=ISO-8859-1
+
+I am using *HTML email* to the fullest.  I've even attached this
+image.&lt;http://goto.case.edu/hacker/hacker-society-small.png&gt;
+
+--000e0cd5bc5e287baf049cf98188
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I am using &lt;b&gt;HTML email&lt;/b&gt; to the fullest.=A0 I&#39;ve even attached &lt;a h=
+ref=3D"http://goto.case.edu/hacker/hacker-society-small.png"&gt;this image.&lt;/a=
+&gt;&lt;br&gt;
+
+--000e0cd5bc5e287baf049cf98188--
+--000e0cd5bc5e287bc6049cf9818a
+Content-Type: image/png; name="hacker-society-small.png"
+Content-Disposition: attachment; filename="hacker-society-small.png"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_gkiqgsei0
+
+iVBORw0KGgoAAAANSUhEUgAAAkYAAABvCAYAAAAJ4Q+7AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A
+/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9gMCwQHDGG2LNIAACAASURBVHja
+7H15vM3V+v+zPnve+8wTzjEfQ2YhhFKZMhXpIpeKW3SLJsmVZLxFicSXG5VScshQqlvoNroSoS4d
+... snip 920 lines ...
+aaKJJppoookm/985SOJHUBZoHH+aaKKJJppoookmmmiiiSaaaKKJJppoookmmmiiiSaaaKKJJppo
+ookmmmiiyb9L/g/x4fcelYr8SgAAAABJRU5ErkJggg==
+--000e0cd5bc5e287bc6049cf9818a--
+</pre>
+		</div>
+		<div class="slide">
+			<h1>But how do I converse</h1>
+<pre>
+...snip...
+In-Reply-To: &lt;d4131e580705210857w6534d948t34432c90dec8e9a9@mail.gmail.com&gt;
+...snip...
+References: &lt;1f65c35a0705192017j6ae21cfgc2cde2eef0ee54a1@mail.gmail.com&gt;
+ &lt;1f65c35a0705201133k2ce3dcdfn64687f6e10afea55@mail.gmail.com&gt;
+ &lt;d4131e580705201844x362047a8j8b15f109049fe5a6@mail.gmail.com&gt;
+ &lt;1f65c35a0705201947x3d65bc2fvca838b1e0d4dd4ff@mail.gmail.com&gt;
+ &lt;d4131e580705210857w6534d948t34432c90dec8e9a9@mail.gmail.com&gt;
+ </pre>
+		</div>
+		<div class="slide titlepage">
+			<h1>Wait, but how do I <em>get</em> my email?</h1>
+		</div>
+		<div class="slide titlepage">
+			<h1>Future?</h1>
+		</div>
+	</body>
+</html>

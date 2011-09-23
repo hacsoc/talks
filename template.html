@@ -5,11 +5,15 @@
     <body>
         <h1>CWRU Hacker Society Talk Materials</h1>
         <div class="talk_list">
-            {% for (title, info) in talks.items() %}
+            {% for info in talks.values() %}
                 <div class="talk_item">
-                    <h3 class="talk_title">{{ title }}</h3>
                     <div class="talk_info">
-                        <strong>Author: </strong>{{ info.author }}
+                        <h3 class="talk_title">{{ info.title }}</h3>
+                        <div class="talk_date">{{ info.date }}</div>
+                        <div class="talk_author">{{ info.author }}</div>
+                        <div class="talk_desc">
+                            <p><strong>Description: </strong>{{ info.description }}</p>
+                        </div>
                     </div>
                 </div>
             {% endfor %}

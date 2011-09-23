@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>CWRU Hacker Society Talk Materials</title>
+    </head>
+    <body>
+        <h1>CWRU Hacker Society Talk Materials</h1>
+        <div class="talk_list">
+            {% for (title, info) in talks.items() %}
+                <div class="talk_item">
+                    <h3 class="talk_title">{{ title }}</h3>
+                    <div class="talk_info">
+                        <strong>Author: </strong>{{ info.author }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>

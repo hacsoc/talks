@@ -1,3 +1,0 @@
-[submodule "master_branch"]
-	path = master_branch
-	url = git://github.com/hacsoc/talks.git

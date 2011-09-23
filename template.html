@@ -14,6 +14,19 @@
                         <div class="talk_desc">
                             <p><strong>Description: </strong>{{ info.description }}</p>
                         </div>
+                        {% if info.formats %}
+                            <div class="talk_formats"><strong>Presentation:</strong>
+                                {% for (fmt, link) in info.formats.items() %}
+                                    <a href="{{ link }}">{{ fmt }}</a>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        {% if info.audio %}
+                            <div class="talk_audio"><a href="{{ info.audio }}">Audio</a></div>
+                        {% endif %}
+                        {% if info.video %}
+                            <div class="talk_video"><a href="{{ info.video }}">Video</a></div>
+                        {% endif %}
                     </div>
                 </div>
             {% endfor %}

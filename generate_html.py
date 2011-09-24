@@ -31,6 +31,7 @@ def parse_info_yaml(path):
         d = yaml.load(f)
         d.setdefault('audio', None)
         d.setdefault('video', None)
+        d.setdefault('links', [])
         d['formats'] = OrderedDict()
         for prespath in glob.glob(os.path.join(path, "presentation.*")):
             fmt = os.path.splitext(prespath)[1][1:]
@@ -46,17 +47,18 @@ def data_for_repos():
     for path in os.listdir('.'):
         if os.path.isdir(path) and path.startswith('2'):
             date_str, title = path.split(' ', 1)
-            date = datetime.datetime.strptime(date_str, '%Y%m%d').strftime('%B %d, %Y')
+            date_obj = datetime.datetime.strptime(date_str, '%Y%m%d')
             try:
                 unsorted_data[path] = parse_info_yaml(os.path.join(path, 'info.yaml'))
                 unsorted_data[path]['title'] = title
-                unsorted_data[path]['date'] = date
+                unsorted_data[path]['date'] = date_obj.strftime('%B %d, %Y')
+                unsorted_data[path]['date_obj'] = date_obj
             except IOError:
                 print('{0} does not have an info.yaml file and will not appear on the page.'.format(path))
 
+    key = lambda d: unsorted_data[d]['date_obj']
     return [unsorted_data[k] for k in sorted(unsorted_data.keys(),
-                                             key=lambda d: unsorted_data[d]['date'],
-                                             reverse=True)]
+                                             key=key, reverse=True)]
 
 def render_talks(talks):
     env = jinja2.Environment(loader=jinja2.FileSystemLoader('.'))

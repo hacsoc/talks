@@ -1,0 +1,6 @@
+author: Gary Doran
+description: How Google Web Toolkit simplifies your web application development by compiling Java into efficient JavaScript, binding UI to control code, bundling static resources, and making client-server interaction painless
+links:
+    GWT Home: http://code.google.com/webtoolkit/
+    Example application: http://split-bill.appspot.com/
+    Example application source: http://code.google.com/p/split-the-bill/

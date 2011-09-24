@@ -33,6 +33,17 @@
                                 {% if info.video %}
                                     <div class="talk_video"><a href="{{ info.video }}">Video</a></div>
                                 {% endif %}
+                                {% if info.links %}
+                                <div class="talk_links">
+                                    <br/>
+                                    Links:
+                                    <ul>
+                                        {% for (link_title, link_url) in info.links.items() %}
+                                        <li><a href="{{ link_url }}">{{ link_title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% endif %}
                             </div>
                         </div>
                         <br/>

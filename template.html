@@ -13,8 +13,7 @@
                     {% for info in talks %}
                         <div class="talk_item">
                             <div class="talk_info">
-                                <h3 class="talk_title">{{ info.title }}</h3>
-                                <div class="talk_date">{{ info.date }}</div>
+                                <h3 class="talk_title">{{ info.date }} - {{ info.title }}</h3>
                                 <div class="talk_author">{{ info.author }}</div>
                                 <br/>
                                 <div class="talk_desc">
@@ -27,7 +26,6 @@
                                         {% endfor %}
                                     </div>
                                 {% endif %}
-                                <br/>
                                 <div class="talk_repo"><a href="{{ info.github }}">Github</a></div>
                                 {% if info.audio %}
                                     <div class="talk_audio"><a href="{{ info.audio }}">Audio</a></div>

@@ -26,33 +26,34 @@ def submodule_name_map():
     return submodules
 
 def parse_info_yaml(path):
-    submodules = submodule_name_map()
     with open(path, 'r') as f:
         d = yaml.load(f)
         d.setdefault('audio', None)
         d.setdefault('video', None)
         d.setdefault('links', [])
-        d['formats'] = OrderedDict()
-        for prespath in glob.glob(os.path.join(path, "presentation.*")):
-            fmt = os.path.splitext(prespath)[1][1:]
-            d['formats'][fmt] = os.path.join(path, prespath)
-        if path in submodules:
-            d['github'] = 'http://www.github.com/hacsoc/{0}'.format(submodules[path])
-        else:
-            d['github'] = 'http://www.github.com/hacsoc/talks/tree/master/{0}'.format(path)
     return d
 
 def data_for_repos():
+    submodules = submodule_name_map()
     unsorted_data = {}
     for path in os.listdir('.'):
         if os.path.isdir(path) and path.startswith('2'):
             date_str, title = path.split(' ', 1)
             date_obj = datetime.datetime.strptime(date_str, '%Y%m%d')
             try:
-                unsorted_data[path] = parse_info_yaml(os.path.join(path, 'info.yaml'))
-                unsorted_data[path]['title'] = title
-                unsorted_data[path]['date'] = date_obj.strftime('%B %d, %Y')
-                unsorted_data[path]['date_obj'] = date_obj
+                d = parse_info_yaml(os.path.join(path, 'info.yaml'))
+                unsorted_data[path] = d
+                d['title'] = title
+                d['date'] = date_obj.strftime('%B %d, %Y')
+                d['date_obj'] = date_obj
+                d['formats'] = OrderedDict()
+                for prespath in glob.glob(os.path.join(path, "presentation.*")):
+                    fmt = os.path.splitext(prespath)[1][1:]
+                    d['formats'][fmt] = os.path.join(path, prespath)
+                if path in submodules:
+                    d['github'] = 'http://www.github.com/hacsoc/{0}'.format(submodules[path])
+                else:
+                    d['github'] = 'http://www.github.com/hacsoc/talks/tree/master/{0}'.format(path)
             except IOError:
                 print('{0} does not have an info.yaml file and will not appear on the page.'.format(path))
 

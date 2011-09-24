@@ -34,9 +34,9 @@ def read_data_from_dir(path):
     date_obj = datetime.datetime.strptime(date_str, '%Y%m%d')
     with open(os.path.join(path, 'info.yaml'), 'r') as f:
         d = yaml.load(f)
-        d.setdefault('audio', None)
-        d.setdefault('video', None)
-        d.setdefault('links', [])
+    d.setdefault('audio', None)
+    d.setdefault('video', None)
+    d.setdefault('links', [])
     d['title'] = title
     d['date'] = date_obj.strftime('%B %d, %Y')
     d['date_obj'] = date_obj

@@ -20,7 +20,6 @@ def Acc(init, step):
 
 acc = Acc(5, 3)
 
-
 def Curry1(f, a):
     def wrapper():
         return f(a)

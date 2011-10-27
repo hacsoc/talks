@@ -19,13 +19,16 @@ def Acc(init, step):
     return Acc
 
 acc = Acc(5, 3)
-
-def Curry1(f, a):
+registry = dict()
+def Curry1(f, a, name):
+    print "registered '%s'" % name
     def wrapper():
+        # make a database call to find out a
         return f(a)
+    registry[name] = wrapper 
     return wrapper
 
-addacc = Curry1(acc, add)
+addacc = Curry1(acc, add, 'add')
 subacc = functools.partial(acc, sub) # no boilerplate
 
 print acc(mul)
@@ -34,4 +37,6 @@ print addacc()
 print addacc()
 print acc(div)
 print subacc()
+
+print registry['add']()
 

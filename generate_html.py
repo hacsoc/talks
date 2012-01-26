@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from collections import OrderedDict
 import datetime
 import glob
@@ -51,7 +52,7 @@ def formats_at_path(path):
     formats = OrderedDict()
     for prespath in glob.glob(os.path.join(path, "presentation.*")):
         fmt = os.path.splitext(prespath)[1][1:]
-        formats[fmt] = os.path.join(path, prespath)
+        formats[fmt] = prespath
     return formats
 
 def data_for_repos():

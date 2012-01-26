@@ -1,0 +1,291 @@
+Introduction
+------------
+
+I would like to begin the evening with a reading from Computer Lib by Ted
+Nelson. (p. 4 of the 1987 edition)
+
+    This book is a measure of desperation, so serious and abysmal is the public
+    sense of confusion and ignorance. Anything with buttons or lights can be
+    palmed off on the layman as a computer. There are so many different things,
+    and their differences are so important; yet to the lay public they are
+    lumped together as "computer stuff," indistinct and beyond understanding or
+    criticism. It's as if people couldn't tell apart camera from exposure meter
+    or tripod, or car from truck or tollbooth. This book is therefore devoted to
+    the premise that EVERYBODY SHOULD UNDERSTAND COMPUTERS.
+
+Ted Nelson produced an incredible guide to computers (in 1974 terms), and his
+attitude is one that we should all share. (I wouldn't say his book is
+perfect...see diagram p. 36 of the 1987 edition.)
+
+Computers have been changing our lives since the prehistory of the 1940s. As
+self-proclaimed "hackers," I believe we have a responsibility to keep making
+that happen.
+
+The word "hacker" has been given several definitions since it first entered
+popular usage. The one I would like to stick is: someone who playfully pushes
+the boundaries of technology with minimal regard to meaningless rules and
+limitations.
+
+Other definitions are not so kind. The media still use it as a term for someone
+who circumvents security systems. For many in the startup echo chamber it has
+taken the more mundane meaning of "really good programmer."
+
+I know no one here disagrees with me about which definition is most appropriate
+for our "organization," but we are all familiar with the argument.
+
+The Origins of Hackers
+----------------------
+
+If you believe Steven Levy, and I do, hackerdom's roots are at MIT, where some
+of the first interactions between university students and Real Computers took
+place. It was an early example of powerful computers being made available to
+people with more wild enthusiasm than formal training. Less than a dozen
+completely insane undergraduates kept utterly unreasonable hours for the sole
+purpose of learning about new machines and modifying them with new hardware for
+serious and silly purposes. Special lingo evolved rapidly, and continued to
+evolve.
+
+The amazing thing about hackerdom, though, is that it didn't just come from MIT.
+It built like a tidal wave everywhere computers were introduced. There had
+always been people who liked to explore at the fringes of things that are
+analogous to programming. Traditional geeks and nerds never needed computers to
+express those personality types.
+
+When computers became widespread, the barrier between the latent hacker and his
+dream was shattered. No longer was informational creativity constrained by cost.
+Computer power became effectively free and infinite in comparison to what had
+come before. You write some instructions, and the computer just DOES IT. There's
+no one to tell you what you can or can't do with the physical parts you hold in
+your hands. There's no one to tell you that something is impossible when you can
+make it happen before your eyes by writing a program. And that power can be
+shared with anyone, instantly.
+
+At MIT in the early days, hackers were confined to a physical location. If you
+weren't in one or two specific rooms, you had no access to a computer. If you
+wanted to show anyone your work, they had to visit the same room. Over time,
+computers were networked, and hackers were able to share with each other better.
+
+Most hacking happens in solitude, but sharing is what makes the real magic
+possible. It helps us find answers to difficult questions, empathize with others
+in similar situations, show off our work and gain recognition, and harness the
+power of collective action. By harnessing the social - yes, social - nature of
+hackers, a Finnish college student named Linus Torvalds was able to build one of
+the most important pieces of software ever written.
+
+Until the last couple of decades, hackerdom was a subculture that affected more
+or less just people involved with computers. But with the mass distribution of
+fully functional interconnected computers, the internet, a few misanthropic
+nerds have the power to change the lives of millions of people. And there's not
+a damn thing the corporations or the governments or the homeowners' associations
+can do to stop it.
+
+There is a person. There is a computer. The computer will do whatever the person
+asks of it, including sharing that person's intentions with anyone who asks for
+them with the simple act of entering a URL. A web site can change your life.
+
+I do not have the words to state how profound that is.
+
+To round out this discussion of the word "hacker," I give you the Hacker Ethic,
+as recorded by Steven Levy:
+
+1) Access to computers -- and anything which might teach you something about the
+way the world works -- should be unlimited and total. Always yield to the
+Hands-On Imperative!
+
+2) All information should be free.
+
+3) Mistrust authority -- promote decentralization.
+
+4) Hackers should be judged by their hacking, not bogus criteria such as
+degrees, age, race, or position.
+
+5) You can create art and beauty on a computer.
+
+6) Computers can change your life for the better.
+
+How to Be
+---------
+
+A question I hear a lot is, how do I get good? How do I get the kind of job I
+want? How do I accomplish this thing I want to do?
+
+I will answer this question cluster in two parts. For the first part, I will do
+something I normally try to avoid: I will talk at length about my own life in
+detail without explicit prompting. For the second part, I will give some general
+advice.
+
+I originally learned to program because of a children's novel. It was about a
+kid who solved his friends' data-related problems, like selecting basketball
+teams, using BASIC. In the fifth grade I went to the library, a sign of the
+times, and ordered all the books I could find on BASIC programming.
+
+This is the one I ended up learning from. This particular copy was given to me
+as a Christmas present by an ex girlfriend. Pick 'em good, kids. (See
+stevejohnson.posterous.com for more about this book.) Here are the first two
+paragraphs of the introduction, as true for a fifth grader as a college student:
+
+    In acquiring knowledge and confidence about using computers, there is no
+    substitute for doing -- that is, learning how to write your own programs.
+    They don't hae to be long, involved, or complicated programs. In fact, after
+    you've done a bit of programming, you may find it's not your thing and
+    decide you'd rather just play computer games (or maybe go roller skating, or
+    read a book). But once you've had that experience, your relation to the
+    computer has changed. You no longer see it as a magical, mysterious machine
+    you'd never think to question. And you'll be able to see more clearly why
+    some programs work they way they do -- and perhaps consider how they might
+    work better.
+
+I finished the book without touching a computer. I didn't have the tools. I
+didn't have the internet. I didn't even know my dad had ever been a programmer
+until weeks or months after I had started to make my own way, after he had taken
+the time to download an interpreter for me to work with.
+
+Over the next year or two I went from simple text adventures and Pokemon battle
+games to graphical arcade games. And then I did nothing but write graphical
+arcade games until I was a sophomore in college.
+
+Here is a list, from memory, of the games I have written since the year 2000.
+
+Text-based Pokemon Battle in BASIC
+Several Hypercard-like adventure games made with the old Mac GameMaker
+Shitty 2D space combat with "swords" and "shields," no projectiles, in which I
+    learned how inertia worked by implementing it, in BASIC of course
+    (3rd from last in http://www.idevgames.com/contests/udg2002)
+Missile Command clone in BASIC
+Galaga clone in BASIC
+Isometric escape-the-dungeon puzzle game in BASIC
+Cover-the-screen-in-paint game in BASIC
+Vector graphics top-down free-motion shooter in BASIC
+
+Then I got a free copy of BlitzMax from a friend with connections. BlitzMax is a
+wrapper over C++ that looks like BASIC.
+Sequel to cover-the-screen-in-paint game
+Galaga clone
+Bibble Biter. I don't even know how to describe this.
+
+During this time I was heavily involved in science and robotics competitions,
+developing a deep frustration with collaborators that couldn't deliver working
+products. I felt like I would never find anyone I would actually enjoy working
+with.
+
+That takes us up to about 2008. I basically wrote nothing but BASIC until 2008.
+I wrote some Java for school and tried Python a couple of times, but never stuck
+with either one because BASIC kept delivering what I wanted: explosions.
+
+At some point, I don't know when, I found a Python game programming library I
+liked and started writing a lot of Python. Around that time I started working on
+projects that weren't games. I started collaborating with Tim. I started having
+better things to do.
+
+After I stopped primarily writing games, I learned about web programming, Git,
+Groovy, UNIX, data structures, operating systems, compilers, computer networks,
+databases, distributed systems...
+
+What I'm saying is that when I started to actually get my computer science
+education, I started to see the big picture. I didn't learn new things because I
+stopped writing games, I stopped writing games because I started to see more
+possibilities in other areas. In high school my programming skills had stagnated
+because I didn't know what I wanted to do with them. At Case I finally found a
+good use for them. There, I said it! I got educated here and it sort of worked!
+
+The common thread between my high school and college experiences with
+programming is the late night marathon coding sessions. Once I get in the zone
+it just goes. I can be amazingly productive when no one else is awake. Another
+common hacker trait.
+
+At what point did I get "good"? I would say it was around the time I started
+working with Tim. Some of the credit goes to him and some does not. The thing
+that really got me writing good code was knowing that if I didn't write good
+code, the project wouldn't move as quickly as I wanted to, and THAT MATTERED TO
+ME. I was working on a board game web app, or a crazy weird operating system,
+and it was interesting and important and fun because I was doing it with someone
+smart and hard working and IT WAS GOING TO WORK! It was going to be better than
+most things I had ever done on my own, it was totally new, and I was totally
+making it work!
+
+It helped that Tim is super smart, and I benefited greatly from his study
+habits.
+
+That's most of my story, skills-wise, and around the time I was writing this I
+was getting tired, so I'll cut to the next bit.
+
+If you really want to be good, here are some things you should do.
+
+1) Work with one or two good people on significant projects on a regular basis.
+Find your complement at any cost.
+
+2) Always have a project to work on. Always. ALWAYS. Even if you're not working
+on it Right Now.
+
+3) Study things that matter. Actually spend time in a quiet room reading,
+thinking, and working through examples. Study more than the instructor tells you
+to.
+
+4) Overachieve on every course project you ever do.
+
+5) Don't stay immersed in one monoculture. Experience as much of humanity as you
+can. You're going to be the one saving these people, and you won't know how to
+save them if you don't know what they need and how they feel. It will make you a
+better person.
+
+6) Ask for things. People like to give them to you and in fact often feel bad
+when they can't give you what you want. This goes for jobs, keys, grades, swag,
+and dates.
+
+7) Have some confidence. Lack of self confidence is an epidemic among smart
+programmers, and humanity in general. If you doubt your skills, work on a harder
+project. When you finish it you'll be better and you'll know you can learn. The
+people you are competing with probably aren't as good as you're afraid they are.
+
+8) Don't agonize over what "kind" of hacker you are. Figure out who *you* are,
+and be that.
+
+Startups
+--------
+
+The last thing I want to talk about is startups.
+
+As a good hacker, it can be very tempting to let someone pay you a pile of money
+on a regular basis to do whatever they want. It's easy for you, and you are
+valued for your contributions. (Or maybe not.) But it has been true for a while
+now that programmers in general are underpaid. Not because the work they are
+doing is necessarily worth more, but because they aren't being paid to do more
+worthwhile work at an achievable level of productivity.
+
+Most of what I want to say here is contained in Paul Graham's essay "How to Make
+Wealth" in Hackers and Painters, but I'll read this bit and summarize the rest:
+
+    If you're a good hacker in your mid twenties, you can get a job paying about
+    $80,000 per year. So on average such a hacker must be able to do at least
+    $80,000 worth of work per year for the company just to break even. You could
+    probably work twice as many hours as a corporate employee, and if you focus
+    you can probably get three times as much done in an hour. You should get
+    another multiple of two, at least, by eliminating the drag of the
+    pointy-haired middle manager who would be your boss in a big company. Then
+    there is one more multiple: how much smarter are you than your job
+    description expects you to be? Suppose another multiple of three. Combine
+    all these multipliers, and I'm claiming you could be 36 times more
+    productive than you're expected to be in a random corporate job. If a fairly
+    good hacker is worth $80,000 a year at a big company, then a smart hacker
+    working very hard without any corporate bullshit to slow him down should be
+    able to do work worth about $3 million a year.
+
+As students, we are accustomed to being part of an institution. We have been
+elementary school students, middle school students, high school students, and
+college students. We are in the same boat as the other students. We do what the
+other students do with similar goals.
+
+Most corporations are not much different in this regard. There is a certain
+safety in having a job -- or there was, until the depression began -- but
+someone with an understanding of the power of computers to change our lives for
+the better has the ability, and I believe obligation, to do better.
+
+Startups are one way to break out of the institutions and work as hard and as
+effectively as you can, to use your skills to the greatest effect. The success
+rate isn't great, not even good, but there are few better ways to discover what
+you are truly capable of. And you don't have to do it just once.
+
+Startups are not for everyone, and I encourage you to explore all your options.
+Just don't get trapped in the idea that you have to get a traditional job, or if
+you do, that you have to approach it in the traditional way. These institutions
+were built by nothing more than people.

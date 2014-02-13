@@ -1,0 +1,8 @@
+author: Tim Henderson
+description: >
+  Functions about functions. For the first half an hour we will learn how to use
+  functions about functions. Examples will be mostly in Python since many already
+  know the language. The next half an hour will discuss implementation details
+  from the compiler author's perspective. If your a beginner come learn a neat
+  programming construct you may not have used. If you already know everything
+  about use higher order functions come learn how they work under the covers.

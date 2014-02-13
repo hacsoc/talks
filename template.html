@@ -26,22 +26,18 @@
                                 <a href="{{ link }}">{{ fmt }}</a>
                             {% endfor %}
                         </div>
-                        <br/>
                         {% endif %}
-
-                        <div class="talk_repo"><a href="{{ info.github }}">Github</a></div>
 
                         {% if info.audio %}
                         <div class="talk_audio"><a href="{{ info.audio }}">Audio</a></div>
-                        <br/>
                         {% endif %}
 
                         {% if info.video %}
                         <div class="talk_video"><a href="{{ info.video }}">Video</a></div>
-                        <br/>
                         {% endif %}
 
                         {% if info.links %}
+                        <br/>
                         <div class="talk_links">
                             <strong>Links: </strong>
                             <ul>
@@ -50,8 +46,9 @@
                                 {% endfor %}
                             </ul>
                         </div>
-                        <br/>
                         {% endif %}
+
+                        <div class="talk_repo"><a href="{{ info.github }}">Github</a></div>
                     </div>
                 </div>
                 <br/>

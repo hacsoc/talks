@@ -28,8 +28,6 @@
                         </div>
                         {% endif %}
 
-                        <div class="talk_repo"><a href="{{ info.github }}">Github</a></div>
-
                         {% if info.audio %}
                         <div class="talk_audio"><a href="{{ info.audio }}">Audio</a></div>
                         {% endif %}
@@ -39,9 +37,9 @@
                         {% endif %}
 
                         {% if info.links %}
+                        <br/>
                         <div class="talk_links">
-                            <br/>
-                            Links:
+                            <strong>Links: </strong>
                             <ul>
                                 {% for (link_title, link_url) in info.links.items() %}
                                 <li><a href="{{ link_url }}">{{ link_title }}</a></li>
@@ -49,6 +47,8 @@
                             </ul>
                         </div>
                         {% endif %}
+
+                        <div class="talk_repo"><a href="{{ info.github }}">Github</a></div>
                     </div>
                 </div>
                 <br/>

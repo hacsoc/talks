@@ -1,0 +1,5 @@
+author: Jared Hance
+description: >
+  We all know what git does, but how does it do it? How does git know how to
+  automagically merge to changes affecting the same file? How is git capable of
+  efficiently storing so much data?

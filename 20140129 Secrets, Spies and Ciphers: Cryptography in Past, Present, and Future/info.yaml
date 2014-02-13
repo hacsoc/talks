@@ -1,12 +1,12 @@
 author: Michelle Bergeron
-description: >+
+description: >
   Since the dawn of communication itself, people have desired a way to keep their
   message exchanges secret and out of sight from prying eyes. This week's HacSoc
   talk is about cryptography: the practice and study of techniques for secure
   communication in the presence of third parties. This talk will be a little
   different than the usual talks in that it does not require knowledge of any
   specific technology, but it is still technical in nature. 
-  
+  <br />
   I'll give a background of the technology used to keep messages safe and focus
   on how it has evolved over time. This talk is designed to engage beginners and
   cryptography experts alike, so come to Hacker Society this Wednesday to

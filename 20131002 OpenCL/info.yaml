@@ -1,0 +1,11 @@
+author: Ben Horstman (MIM)
+description: >
+  Every want to multiply big ass matrices? If you want to do image/video processing,
+  or computer vision then the answer is yes. OpenCL is an open, cross platform,
+  GPU compute library that allows you to use your GPU to do things like multiply
+  big ass matrices.
+  <br />
+  MIM is a Cleveland based medical imaging company; they have really cool software
+  that takes 3d scans and rescales them and uses feature matching to overlay them
+  in another color so you can, lets say, take 2 CT scans from different points in
+  time and see how the size and shape of a tumor is changing overtime.

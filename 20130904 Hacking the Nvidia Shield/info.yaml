@@ -1,0 +1,6 @@
+author: Cameron Gutman
+description: >
+  The Shield is a handheld android game console that can stream games being played
+  from a host computer.  The Shield is not designed to be played over a NAT;
+  however, Cameron is going to tell us about a utility he wrote to get around
+  this restriction.

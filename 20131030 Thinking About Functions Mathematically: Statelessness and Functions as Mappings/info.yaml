@@ -1,0 +1,7 @@
+author: Brendan Higgins
+description: >
+  We are building ever larger, more concurrent, systems in which state is a
+  liability. Thus if we think about functions as mappings without side effects
+  and state it becomes much easier not only to make programs concurrent, but to
+  make more scalable and even more readable code. So come to HacSoc and learn
+  about cool functional stuff!

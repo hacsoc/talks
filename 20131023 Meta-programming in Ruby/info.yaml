@@ -1,0 +1,7 @@
+author: Jon Pfeil
+description: >
+  Ruby is a truly complete object oriented language in the sense that everything
+  in Ruby is an object. Ruby also allows you to modify any preexisting type.
+  For example, let's say you wish that integers defined some method, you can
+  just add that method in on your own! There are some other languages that allow
+  you to do similar things so it is always useful (and fun) to see how others do it.

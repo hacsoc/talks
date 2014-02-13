@@ -1,0 +1,6 @@
+author: Brendan Higgins
+description: >
+  This talk has a little bit for everyone: for those of you who are unfamiliar
+  with regexs I will be talking about what they are and how to use them and how
+  they make your life easier; for those regex masters I will be talking about
+  how to write a regex compiler and engine.

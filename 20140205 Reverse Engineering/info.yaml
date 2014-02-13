@@ -1,0 +1,6 @@
+author: Cameron Gutman
+description:
+  He goes over the basics of how to reverse engineer a protocol, what strategies
+  you use, and what technologies, such as Wireshark, you can use. He also explains
+  how this was used to reverse engineer the NVIDIA GameStream Protocol to be
+  able to create Limelight (limelight-stream.com).    

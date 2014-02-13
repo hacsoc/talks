@@ -1,0 +1,4 @@
+author: Doug Meil
+description: >
+  HBase is a "open-source, distributed, versioned, non-relational database
+  modeled after Google's Bigtable." It is the database that backs Hadoop.

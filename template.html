@@ -26,28 +26,31 @@
                                 <a href="{{ link }}">{{ fmt }}</a>
                             {% endfor %}
                         </div>
+                        <br/>
                         {% endif %}
 
                         <div class="talk_repo"><a href="{{ info.github }}">Github</a></div>
 
                         {% if info.audio %}
                         <div class="talk_audio"><a href="{{ info.audio }}">Audio</a></div>
+                        <br/>
                         {% endif %}
 
                         {% if info.video %}
                         <div class="talk_video"><a href="{{ info.video }}">Video</a></div>
+                        <br/>
                         {% endif %}
 
                         {% if info.links %}
                         <div class="talk_links">
-                            <br/>
-                            Links:
+                            <strong>Links: </strong>
                             <ul>
                                 {% for (link_title, link_url) in info.links.items() %}
                                 <li><a href="{{ link_url }}">{{ link_title }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
+                        <br/>
                         {% endif %}
                     </div>
                 </div>

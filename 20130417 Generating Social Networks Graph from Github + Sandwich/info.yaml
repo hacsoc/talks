@@ -1,0 +1,9 @@
+author: Aaron Neyer
+description: >
+  My talk will just be a brief presentation of my work with Aron Lindberg in
+  generating social network graphs from Github. I will talk about some of the
+  technologies used, such as Googles BigQuery for getting large amounts of data
+  with minimal effort.
+  <br />
+  My talk will be relatively short, and afterwards me, Brendan, Diego, and
+  Cameron will give a mini talk on the current progress of Sandwich.

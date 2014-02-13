@@ -5,4 +5,5 @@ description: >
    a hash table that grows beyond the size of the main memory on your computer
    this is the talk for you! I will discuss the algorithm and its properties.
    A Go implementation will be provided for your enjoyment.
-blog-post: <http://hackthology.com/linear-hashing.html>
+links:
+  blogpost: http://hackthology.com/linear-hashing.html

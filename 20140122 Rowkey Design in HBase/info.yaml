@@ -1,4 +1,7 @@
 author: Doug Meil
 description: >
   HBase is a "open-source, distributed, versioned, non-relational database
-  modeled after Google's Bigtable." It is the database that backs Hadoop.
+  modeled after Google's Bigtable." It is the database that backs Hadoop. This talk discussed the design requirements for the rowkey that defines each row stored in an HBase table.
+
+links:
+  Official Apache Documentation: https://hbase.apache.org/book/rowkey.design.html

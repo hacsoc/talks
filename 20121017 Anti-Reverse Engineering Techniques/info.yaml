@@ -1,0 +1,6 @@
+author: Ryan Welton (Mobile Defense)
+description: >
+  Anti-Reverse Engineering techniques: Basic exercises in obfuscation and dynamic
+  analysis evasion. Ryan will be talking about techniques commonly used to obscure
+  the intent of an application as well as detecting and behavior when under scrutiny.
+  This talk will be geared particularly toward the Android platform.

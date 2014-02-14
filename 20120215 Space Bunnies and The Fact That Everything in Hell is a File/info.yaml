@@ -1,0 +1,10 @@
+author: John Dulin
+description: >
+  This week in Hacker Society, I will be talking about distributed operating systems,
+  particularly the most recent research progeny of Bell Labs, "Plan 9 from Bell Labs" and "Inferno."
+
+  Plan 9 was a research platform developed in the 1980s by many of the same
+  engineers who built Unix, while Inferno is a more recent operating system
+  developed by Vita Nuova, based on the design principles and innovations of
+  Plan 9.  I will explore the more curious and unique design features of Plan 9,
+  the reasons for them, and the fact that the circles of Hell dynamically link to one another.

@@ -1,0 +1,16 @@
+author: Mark Allman
+description: >
+  This talk will first delve into the importance of empirical Internet
+  measurement as a means for understanding the system at scale.  We will
+  discuss the history of rigorous measurement and the general approaches
+  taken to date.  We argue that the approaches taken to date---while
+  useful in modest terms---lack the broad visibility required to
+  understand the Internet at scale.  We then introduce a Firefox
+  extension---called Fathom---that will provides a measurement-oriented
+  API to JavaScript code that can be included with any web page and hence
+  executed on a broad set of Internet-connected hosts.  We discuss several
+  use cases for this extensions, discuss security and privacy
+  implications, sketch the overhead of the system and the accuracy of the
+  measurements.
+links:
+  Slides: http://www.icir.org/mallman/talks/fathom-hacsoc-mar12.pdf

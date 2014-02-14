@@ -1,0 +1,12 @@
+author: Josh Snyder
+description: >
+  The advent of public-key cryptography in the 1970s, together with the rise of
+  computers, caused a revolution in the field of secret keeping.  Cryptography
+  was quickly changed from an esoteric art to a public science.  It became
+  accessible to the masses as never before, spurring a revolution in the field
+  as it adapted to handling the everyday business of a much larger audience.
+  After giving a very brief introduction on the need for and workings of public-key
+  algorithms, I will discuss many of the difficulties inherent in using these and
+  other cryptographic primitives to secure information in the real world.
+  We shall touch on topics criminally under-discussed today, including the PKI
+  problem, secure storage of passwords, and the issues associated with storing data in-place.

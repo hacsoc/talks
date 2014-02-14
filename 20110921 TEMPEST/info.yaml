@@ -1,0 +1,24 @@
+author: Tyler Laseter
+description: >
+  TEMPEST and SIGINT (Signals Intelligence) -- Or: The Tip of the Iceberg in Ubiquitous Electronic Signals
+  <br />
+  We live in a highly interconnected world, yet many of those interconnections
+  are either passively or actively hidden from us. Furthermore, many of the analysis
+  tools are expensive, confusing, or are simply never taught. My talk will both
+  introduce the concept of TEMPEST as well as more broadly describe signals
+  intelligence attacks, counterattacks, and counter-countermeasures, as well as an
+  overview of time vs. frequency domain analysis, vulnerability of devices, and
+  a variety of demonstrations exposing these concepts (and a couple of campus radio
+  signals to boot). Topics covered will include:
+  <br />
+  -So what's a spectrum analyzer, anyways?
+  <br />
+  -Why are all* receivers transmitters?
+  <br />
+  -What do power supplies have to do with device security?
+  <br />
+  -What kinds of radio protocols are out there?
+  <br />
+  -What kinds of equipment can be used to toy around with these concepts?
+  <br />
+  ...as well as a variety of other concepts.

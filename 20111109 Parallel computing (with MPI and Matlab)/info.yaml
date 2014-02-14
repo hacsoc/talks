@@ -1,0 +1,19 @@
+author: Alexey Ilchenko
+description: >
+  There is a fundamental difficulty that comes up when you try to parallelize a
+  task: would you like your architecture to employ shared or distributed memory?
+  For example, if you use shared memory, how do you let a specific processor know
+  whether or not a piece of data was updated by another processor. A proposed solution
+  comes by passing messages using a library called MPI, Message Passing Interface.
+  MPI uses graph theory to understand the architecture and efficiently pass messages
+  between vertices/processors. Unfortunately, MPI doesn't simply compile a parallized
+  version of your program and, if you want a parallel algorithm, you have to be aware
+  of bits of your algorithm that are readily parallelizable. One readily parallelizable
+  component is the iteration space of some loop: I will give examples of matrix vector
+  multiplication and two efficient ways to parallelize the iteration space in a
+  finding prime numbers algorithm.
+  <br />
+  As an added treat, we can easily learn how to initialize workers in Matlab's
+  Parallel Computing Toolbox (Parallel Toolbox is included with Case's version of
+  Matlab) and how to perform for-loops in parallel under certain conditions
+  (Matlab parallelization pays off in time even on 2-core computers).

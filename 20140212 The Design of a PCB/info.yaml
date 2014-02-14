@@ -2,11 +2,12 @@ author: Thomas Murphy
 description: >
   The design of a PCB (printed circuit board).
   Objective planning and reading datasheets.
-  Schematic capture: understanding how the parts connect, expressing.
-  Electrical requirements/values.
-  Layout: footprint design, number of layers on board, routing signals,
-  ground/power planes, design rules/constraints, placement of components
+  Schematic capture: understanding how the parts connect, expressing electrical requirements/values.
+  Layout: footprint design, number of layers on board, routing signals, ground/power planes, design rules/constraints, placement of components.
   Manufacturing options for prototypes.
-  Software options and standards for this process.
   Board hand assembly: surface mount and through-hole.
+  Software options and standards for this process.
   Demonstrations of gEDA and the resulting product.
+
+links:
+  Board Designed in gEDA: https://github.com/thomasrussellmurphy/board-demo

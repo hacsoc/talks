@@ -1,0 +1,10 @@
+author: Brian Stack
+description: >
+  This week in Hacker Society, you can listen to Brian Stack pop his stack* on
+  SPDY (pronounced "SPeeDY"), an experimental protocol for a faster web from Google.
+  SPDY is a protocol developed from Google's "Let's Make the Web Faster" initiative
+  (https://developers.google.com/speed/) designed to reduce latency in loading
+  web pages at the application layer.  (http://www.chromium.org/spdy/spdy-whitepaper)
+  SPDY looks like an interesting update to HTTP and has been shown to make loading
+  web pages 64% faster;  It could be the future of the web!  So you should definitely
+  come listen to him at the same place, same time,

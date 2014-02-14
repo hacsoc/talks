@@ -1,0 +1,8 @@
+author: Brendan Higgins
+description: >
+  Go is a programming language that went into development by a team at Google in 2007,
+  including Rob Pike, Ken Thompson, and Robert Griesemer.  One of the stated goals
+  of Go is to offer the efficiency of a statically typed language with the ease
+  of programming of a dynamically typed, and I know that it is being used more
+  and more internally at Google. Brendan will be offering an introduction of the
+  features and design choices in the language and their motivation.

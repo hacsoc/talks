@@ -1,0 +1,8 @@
+author: Matt Bierner
+description: >
+  Matt Bierner will be talking about, well, combinatorial parsers and functional
+  programming with Javascript!  He has been working on a ECMAScript 5 parser and
+  working on a combinatorial parser Javascript library, parse.js.
+links:
+  Parser Library: https://github.com/mattbierner/parse.js
+  ECMAScript Parser: https://github.com/mattbierner/parse-ecma

@@ -1,0 +1,16 @@
+author: Christopher Armenio (Iotos)
+description: >
+  <br />
+  1. Open-source projects and tools for creating your own internet-enabled projects
+  <br />
+  This will be a whirl-wind tour of a number of open-source projects and tools
+  that we have found useful including:
+  <br />
+  Arduino, Roving Networks Wifly modules, the Apache Mina project, Amazon AWS
+  and EC2, Ubuntu Server, and a light topping of PHP. The talk will be more tutorial
+  oriented showing how you can leverage each of these tools in your own projects.
+  <br />
+  2. The iOTOS platform, what it does, and how to use it
+  I definitely don't want this to be a sales pitch...so this will be relatively
+  brief. We'll cover the iOTOS platform, what it does, how it works, and how you
+  can use it in your own internet-enabled projects.

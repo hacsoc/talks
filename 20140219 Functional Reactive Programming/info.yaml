@@ -7,7 +7,7 @@ description: >
   of things including: Ruby web development, Windows Phone applications, Android
   application, and Python and Scala back end services. Most recently he has worked
   as on our deployment and provisioning infrastructure which uses Capistrano and Chef.
-
+  <br />
   His talk will offer a brief intro to monads and side effect free code as well
   as an introduction to the observable monad. Brandon will also offer an example
   of how reactive programming can benefit UI design.

@@ -13,7 +13,7 @@
                 {% for info in talks %}
                 <div class="talk_item">
                     <div class="talk_info">
-                        <h3 class="talk_title">{{ info.date }} - {{ info.title }}</h3>
+                      <h3 class="talk_title" id="talk_{{info.date_str}}">{{ info.date }} - {{ info.title }}</h3>
                         <div class="talk_author">{{ info.author }}</div>
                         <br/>
                         <div class="talk_desc">

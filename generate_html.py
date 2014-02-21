@@ -41,6 +41,7 @@ def read_data_from_dir(path):
     d['title'] = title
     d['date'] = date_obj.strftime('%B %d, %Y')
     d['date_obj'] = date_obj
+    d['date_str'] = date_str
     d['formats'] = formats_at_path(path)
     if path in SUBMODULE_NAMES:
         d['github'] = 'http://www.github.com/hacsoc/{0}'.format(SUBMODULE_NAMES[path])

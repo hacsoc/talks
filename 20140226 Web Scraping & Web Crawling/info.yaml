@@ -1,0 +1,7 @@
+author: Aaron Neyer
+description: >
+  I will talk about how to pull relevant information off of web pages using tools
+  such as Nokogiri and Mechanize, and some tips for how to best analyze the source
+  code to most efficiently extract the information. I will also go over how search
+  engines like Google create web crawlers that scrape information off of web pages
+  to create an index of the internet.

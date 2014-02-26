@@ -30,6 +30,11 @@ def submodule_name_map():
 
 SUBMODULE_NAMES = submodule_name_map()
 
+def dict_constructor(loader, node):
+    return OrderedDict(loader.construct_pairs(node))
+
+yaml.add_constructor(yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, dict_constructor)
+
 def read_data_from_dir(path):
     date_str, title = path.split(' ', 1)
     date_obj = datetime.datetime.strptime(date_str, '%Y%m%d')

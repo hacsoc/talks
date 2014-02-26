@@ -5,3 +5,8 @@ description: >
   code to most efficiently extract the information. I will also go over how search
   engines like Google create web crawlers that scrape information off of web pages
   to create an index of the internet.
+links:
+  Nokogiri: http://nokogiri.org/
+  lxml: http://lxml.de/
+  Mechanize: http://docs.seattlerb.org/mechanize/
+  Scrapy: http://scrapy.org/

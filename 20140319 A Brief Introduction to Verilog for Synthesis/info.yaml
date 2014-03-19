@@ -1,0 +1,9 @@
+author: Mitchell Haynes
+description: >
+  Hardware Description Languages (HDLs) have a variety of applications in writing,
+  verifying and documenting logic design. In particular, they are used designing
+  logic used in a number of real-time or embedded environments, such as for PLDs,
+  FPGAs or logic ASICS. I will be providing a very brief introduction to the Verilog
+  HDL, and demonstrating how to use standard synthesize-able Verilog language constructs
+  to write practical logic designs. I will also go through a few examples to give
+  further context.

@@ -1,0 +1,10 @@
+author: Jared Hance
+description: >
+    Starting with the basics of Makefiles and then working into how autoconf and
+    automake actually work and how they (believe it or not) make your life easier.
+    Brief touch on the differences between Autotools and CMake and what makes them
+    distinct objectively.  Coverage of autoconf, automake, libtool, aclocal,
+    autoheader, m4, m4sh etc.  Description of how to actually manage the project
+    properly and distribute it.  Some description about internals and why it
+    works the way it does.
+

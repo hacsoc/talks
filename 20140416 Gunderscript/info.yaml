@@ -1,0 +1,7 @@
+author: Christian Gunderman
+description: >
+  Christian Gunderman, a sophomore at Case is going to be talking about
+  a scripting language he is making called gunderscript. Gunderscript features
+  a compiler that compiles it to a byte-code that is executed in a stack based
+  virtual machine. Christian will be talking about the architecture of his
+  compiler and virtual machine and will of course have a demo of his language.

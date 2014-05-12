@@ -1,0 +1,18 @@
+author: Andrew Konya, Aaron Slodov
+description: >
+  Beginning with "We the People" the US Constitution implies that it itself speaks
+  for the newly forming American people. In the United States the idea of
+  "speaking for the people" is central to governance and implemented by way of a
+  representative democracy.  People are elected to 'speak for' their constituents
+  within different governing bodies. This idea is predicated upon the assumption
+  that the people will elect the individual which best 'speaks for' them.  This
+  paradigm has a few fundamental challenges: First, the options of who can be chosen
+  to 'speak for' a group are typically limited.  Second, the ways by which a
+  ‘speaker’ can be chosen are overly simplistic  and subject to many forms of
+  corruption.  Lastly, a single person may be subject to many influences outside
+  of the group they speak for.  The resulting 'voice' is an unreliable and crude
+  approximation to what it means to 'speak for' a group of people.  
+
+  This talk will introduce a theoretical framework to more objectively consider
+  what it means to 'speak for' a group of people as well as discuss its
+  computational implementation within the context of a conversation.

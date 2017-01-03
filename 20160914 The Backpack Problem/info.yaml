@@ -1,0 +1,9 @@
+author: Andrew Hamm
+description: >
+  The knapsack problem is cool, but not extremely applicable. You don't often
+  find myself in a room and taking any object you want. What you do often come
+  across is having to maximize value with requirements. An example of this is
+  optimizing a sports team. Each player has a cost and value, while you have a
+  budget. But you can't just take any player, you need a certain amount of
+  players for each position. How do you optimize for situations like this? Let
+  Andrew Hamm show you in this week's edition of Hacker Society (c).

@@ -1,0 +1,11 @@
+author: Matt Sargent
+description: >
+  Multihomed devices on the internet have been plentiful since the rise of 
+  smartphones, but techniques to take advantage of multiple network paths 
+  without writing custom applications are still in development. One solution, 
+  MultiPath TCP, enables TCP communication over multiple network paths for any 
+  program (including legacy TCP-based programs) running on a host. Matt will 
+  explain the advantages of this solution and cover the basics of MultiPath TCP 
+  connection establishment and management. Matt will also provide information 
+  on how to replace a vanilla TCP stack with a MultiPath TCP capable stack 
+  under Linux.

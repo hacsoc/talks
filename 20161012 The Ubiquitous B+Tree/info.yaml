@@ -1,0 +1,8 @@
+author: Tim Henderson
+description: >
+  The B+Tree is the most important data structure you did not learn about in 
+  EECS 233. It is used in nearly every data storage system: MySQL, MongoDB, 
+  Postgres, Oracle, btrfs, ... B+Trees are self balancing search trees which 
+  store multiple keys and values in each node. They are optimized for secondary 
+  storage and there are variants for both traditional hard disks and solid 
+  state disks. Come learn about this essential data structure and slay dragons.

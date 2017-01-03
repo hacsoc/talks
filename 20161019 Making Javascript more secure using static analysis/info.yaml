@@ -1,0 +1,7 @@
+author: Koby Picker
+description: >
+  Static Analysis is a great tool for learning more about the code we write. 
+  Particularly, its application in bug-finding and vulnerability detection is 
+  really cool and really useful. This talk will be a theoretical introduction 
+  to Static Analysis, with my work on Javascript as a motivating example, and 
+  vulnerability detection as the end-goal.
